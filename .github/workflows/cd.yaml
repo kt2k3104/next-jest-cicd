@@ -16,7 +16,7 @@ jobs:
           key: ${{ secrets.DO_PKEY }}
           port: ${{ secrets.DO_PORT }}
           script: |
-            rm -rf code && mkdir code && cd code
+            cd code
             git clone https://github.com/kt2k3104/next-jest-cicd.git
             cd next-jest-cicd
             npm install
