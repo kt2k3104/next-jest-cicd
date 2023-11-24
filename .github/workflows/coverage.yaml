@@ -2,14 +2,18 @@ name: 'coverage'
 
 on:
   pull_request_target:
-    branches: [main]
+    branches:
+      - main
 
 jobs:
   coverage:
+    permissions:
+      contents: write
+      pull-requests: write
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: 'Auto generate coverage report'
+      - name: 'Generate coverage report'
         uses: ArtiomTr/jest-coverage-report-action@v2
         with:
-          package-manager: yarn
+          package-manager: npm
