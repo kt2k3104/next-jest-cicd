@@ -17,8 +17,7 @@ jobs:
           port: ${{ secrets.DO_PORT }}
           script: |
             cd code
-            rm -rf next-jest-cicd
-            git clone https://github.com/kt2k3104/next-jest-cicd.git
+            rm -rf next-jest-cicd && git clone https://github.com/kt2k3104/next-jest-cicd.git
             cd next-jest-cicd
             npm install
             echo "${{ secrets.ENV }}" >> .env
