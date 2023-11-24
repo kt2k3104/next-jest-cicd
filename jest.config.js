@@ -5,7 +5,7 @@ const createJestConfig = nextJest({
   dir: './',
   coverageThreshold: {
     global: {
-      lines: 80,
+      lines: 90,
     },
   },
 })
