@@ -16,7 +16,6 @@ jobs:
           key: ${{ secrets.DO_PKEY }}
           port: ${{ secrets.DO_PORT }}
           script: |
-            kill -9 $(sudo lsof -t -i:3000)
             cd code
             rm -rf next-jest-cicd
             git clone https://github.com/kt2k3104/next-jest-cicd.git
